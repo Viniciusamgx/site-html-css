@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Contato - Barbearia Alura</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
@@ -25,16 +26,56 @@
 		<form>
 
 			<label for="nomesobrenome">Nome e Sobrenome</label>
-			<input type="text" id="nomesobrenome">
+			<input type="text" id="nomesobrenome" class="input-padrao" required placeholder="Nome Sobrenome">
 
 			<label for="email">Email</label>
-			<input type="text" id="email">
+			<input type="email" id="email" class="input-padrao" required placeholder="Seu email">
 
 			<label for="telefone">Telefone</label>
-			<input type="text" id="telefone">
-			<input type="submit" value="Enviar Formulário">
+			<input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) x xxxx-xxxx">
+
+			<label for="mensagem">Mensagem</label>
+			<textarea cols="30" rows="10" id="mensagem"></textarea>
+
+			<fieldset>
+				<legend>Como prefere nosso contato?</legend>
+
+				<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+
+				<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+
+				<label for="radio-whatsapp"><input type="radio" name="contato" value="WhatsApp" id="radio-whatsapp">WhatsApp</label>
+			</fildset>
+
+			<fieldset>
+				<legend>Melhor Horario para contato</legend>
+				<select>
+					<option>Manhã</option>
+					<option>Tarde</option>
+					<option>Noite</option>
+				</select>
+			</fildset>
+
+			<label class="checkbox"><input type="checkbox" name=""> Gostaria de receber nossas novidades por Email?</label>
+
+				<p><input type="submit" value="Enviar Formulário" class="enviar"></p>
 
 		</form>
+
+		<table>
+			<tr></tr>
+				<td>Dia</td>
+				<td>Horário</td>
+			<tr></tr>
+				<td>Segunda</td>
+				<td>8h ~ 20h</td>			
+			<tr></tr>
+				<td>Quarta</td>
+				<td>8h ~ 20h</td>
+			<tr></tr>
+				<td>Sexta</td>
+				<td>8h ~ 20h</td>
+		</table>
 		
 	</main>
 
